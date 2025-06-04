@@ -1,0 +1,5 @@
+4
+5 red wood
+4 yellow metal
+6 green cardboard
+9 blue metal
