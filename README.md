@@ -1,2 +1,2 @@
-# BSUIR_Labs_OAIP
+# BSUIR_Labs_and_Work
 Лабораторные работы по ОАИП за 1 и 2 семестры.
