@@ -1,0 +1,1239 @@
+/* ===== ОСНОВНЫЕ СТИЛИ ПРИЛОЖЕНИЯ ===== */
+QMainWindow {
+    background-color: #f5f5f5;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+QWidget {
+    background-color: #f5f5f5;
+}
+
+/* ===== ЗАГОЛОВКИ И ТЕКСТ ===== */
+/* Основной заголовок "Лабораторная работа" */
+#titleLabel {
+    font-size: 48px;  /* Увеличен размер */
+    font-weight: bold;
+    color: #000000;  /* Черный цвет */
+    padding: 15px;
+    margin: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* Подзаголовок под "Лабораторная работа" */
+#descLabel {
+    font-size: 28px;  /* Увеличен размер */
+    color: #000000;  /* Черный цвет */
+    padding: 5px;  /* Уменьшен padding чтобы был ближе */
+    margin: 5px;  /* Уменьшен margin чтобы был ближе */
+    margin-top: -15px;  /* Отрицательный margin чтобы поднять выше */
+    line-height: 1.4;
+    text-align: center;
+    font-weight: normal;
+}
+
+#small {
+    font-size: 35px;
+    color: #7f8c8d;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* ===== КАРТОЧКИ ТЕСТОВ ===== */
+#card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 8px;
+}
+
+#card:hover {
+    border-color: #3498db;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ===== КАРТОЧКИ ТЕОРИИ ===== */
+#theoryCard {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 8px;
+}
+
+#theoryTitle {
+    font-size: 35px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+#theoryText {
+    font-size: 30px;
+    color: #34495e;
+    line-height: 1.6;
+    padding: 8px;
+}
+
+/* ===== КНОПКИ ===== */
+QPushButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 18px;
+    font-size: 20px;
+    min-width: 90px;
+}
+
+QPushButton:hover {
+    background-color: #2980b9;
+}
+
+QPushButton:pressed {
+    background-color: #21618c;
+}
+
+QPushButton:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+/* Основная кнопка */
+QPushButton#primary {
+    background-color: #27ae60;
+    font-weight: bold;
+}
+
+QPushButton#primary:hover {
+    background-color: #219653;
+}
+
+QPushButton#primary:pressed {
+    background-color: #1e8449;
+}
+
+/* Кнопки ответов */
+QPushButton[checkable="true"] {
+    background-color: white;
+    color: #2c3e50;
+    border: 2px solid #bdc3c7;
+    text-align: left;
+    padding: 15px;
+    margin: 5px;
+    font-size: 30px;
+}
+
+QPushButton[checkable="true"]:hover {
+    border-color: #3498db;
+    background-color: #ecf0f1;
+}
+
+QPushButton[checkable="true"]:checked {
+    border-color: #3498db;
+    background-color: #d6eaf8;
+}
+
+/* Стили для правильных/неправильных ответов */
+QPushButton[correct="true"] {
+    background-color: #28a745;
+    color: #ffffff;
+    border-color: #28a745;
+    font-weight: bold;
+}
+
+QPushButton[incorrect="true"] {
+    background-color: #dc3545;
+    color: #ffffff;
+    border-color: #dc3545;
+    font-weight: bold;
+}
+
+/* ===== ПРОГРЕСС БАР ===== */
+QProgressBar {
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    text-align: center;
+    color: #2c3e50;
+    background-color: white;
+    height: 24px;
+    font-size: 14px;
+}
+
+QProgressBar::chunk {
+    background-color: #27ae60;
+    border-radius: 3px;
+}
+
+/* ===== ОБЛАСТИ ПРОКРУТКИ ===== */
+QScrollArea {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+QScrollArea QWidget {
+    background-color: white;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background-color: #ecf0f1;
+    width: 14px;
+    margin: 0px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background-color: #bdc3c7;
+    border-radius: 6px;
+    min-height: 25px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background-color: #95a5a6;
+}
+
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+    border: none;
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background-color: #ecf0f1;
+    height: 14px;
+    margin: 0px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background-color: #bdc3c7;
+    border-radius: 6px;
+    min-width: 25px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background-color: #95a5a6;
+}
+
+QScrollBar::add-line:horizontal, 
+QScrollBar::sub-line:horizontal {
+    border: none;
+    background: none;
+}
+
+/* ===== ДИАЛОГОВЫЕ ОКНА ===== */
+QMessageBox {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+QMessageBox QLabel {
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+QMessageBox QPushButton {
+    min-width: 90px;
+    margin: 8px;
+    font-size: 15px;
+}
+
+/* ===== ИЗОБРАЖЕНИЯ ===== */
+QLabel[objectName="image_label"] {
+    background-color: white;
+    border: 10px solid #ddd;
+    border-radius: 50px;
+    padding: 50px;
+}
+
+/* ===== ТЕКСТ ВОПРОСА ===== */
+QLabel[objectName="question_text"] {
+    font-size: 30px;
+    color: #2c3e50;
+    line-height: 1.5;
+    padding: 12px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ecf0f1;
+}
+
+/* ===== МЕТКИ СЧЕТЧИКА ===== */
+QLabel[objectName="counter_label"] {
+    font-size: 14px;
+    color: #7f8c8d;
+    background-color: #ecf0f1;
+    padding: 8px 12px;
+    border-radius: 15px;
+    border: 1px solid #bdc3c7;
+}
+
+/* ===== ЗАГОЛОВОК ТЕСТА ===== */
+QLabel[objectName="test_title_label"] {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    padding: 12px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ecf0f1;
+}
+
+/* ===== КОНТЕЙНЕРЫ ===== */
+QWidget[objectName="cards_container"] {
+    background-color: transparent;
+}
+
+QWidget[objectName="central"] {
+    background-color: #f5f5f5;
+}
+
+/* ===== КНОПКА "ДАЛЕЕ" ===== */
+QPushButton[objectName="next_button"] {
+    background-color: #3498db;
+    font-weight: bold;
+    min-width: 120px;
+    font-size: 16px;
+    padding: 12px 20px;
+}
+
+QPushButton[objectName="next_button"]:hover {
+    background-color: #2980b9;
+}
+
+QPushButton[objectName="next_button"]:pressed {
+    background-color: #21618c;
+}
+
+QPushButton[objectName="next_button"]:disabled {
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+
+/* ===== ОБЛАСТЬ ОТВЕТОВ ===== */
+QWidget[objectName="answers_layout"] {
+    background-color: transparent;
+}
+
+/* ===== ИЗОБРАЖЕНИЯ В ТЕОРИИ ===== */
+QLabel[objectName^="theory_image"] {
+    margin: 100px;
+    border: 10px solid #ddd;
+    padding: 50px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+/* ===== ФРЕЙМЫ ===== */
+QFrame {
+    background-color: white;
+}
+
+QFrame[objectName="card"] {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 8px;
+}
+
+QFrame[objectName="theoryCard"] {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 8px;
+}
+
+/* ===== ХЕДЕРЫ ===== */
+QHeaderView::section {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ===== ТАБЛИЦЫ ===== */
+QTableWidget {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 35px;
+}
+
+QTableWidget::item {
+    padding: 15px;
+    border-bottom: 1px solid #ecf0f1;
+    font-size: 30px;
+    min-height: 50px;
+}
+
+QTableWidget::item:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Альтернативные строки таблицы */
+QTableWidget::item:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Цвет линий сетки - используем border вместо gridline-color */
+QTableWidget {
+    border: 1px solid #ecf0f1;
+}
+
+/* Высота строк в таблице */
+QTableWidget QTableCornerButton::section {
+    height: 50px;
+}
+
+QHeaderView {
+    font-size: 20px;
+    min-height: 60px;
+}
+
+QHeaderView::section {
+    padding: 20px;
+    font-size: 22px;
+    min-height: 60px;
+}
+
+/* ===== ПАНЕЛИ ИНСТРУМЕНТОВ ===== */
+QToolBar {
+    background-color: white;
+    border: none;
+    padding: 8px;
+}
+
+QToolButton {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 8px 12px;
+    margin: 3px;
+    font-size: 14px;
+}
+
+QToolButton:hover {
+    background-color: #2980b9;
+}
+
+/* ===== СТАТУС БАР ===== */
+QStatusBar {
+    background-color: #34495e;
+    color: white;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* ===== РАЗДЕЛИТЕЛИ ===== */
+QSplitter::handle {
+    background-color: #bdc3c7;
+}
+
+QSplitter::handle:hover {
+    background-color: #95a5a6;
+}
+
+/* ===== ГРУППОВЫЕ БОКСЫ ===== */
+QGroupBox {
+    font-weight: bold;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    margin-top: 12px;
+    padding-top: 12px;
+    background-color: white;
+    font-size: 16px;
+}
+
+QGroupBox::title {
+    padding: 3px 8px;
+    background-color: #34495e;
+    color: white;
+    border-radius: 3px;
+    margin-left: 12px;
+    top: -12px;
+    font-size: 20px;
+}
+
+/* ===== ПОЛЯ ВВОДА ===== */
+QLineEdit {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: white;
+    font-size: 40px;
+}
+
+QLineEdit:focus {
+    border-color: #3498db;
+}
+
+QLineEdit::selected {
+    background-color: #3498db;
+}
+
+QTextEdit {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: white;
+    font-size: 40px;
+}
+
+QTextEdit:focus {
+    border-color: #3498db;
+}
+
+QTextEdit::selected {
+    background-color: #3498db;
+}
+
+/* ===== КНОПКИ РАДИО И ЧЕКБОКСЫ ===== */
+QRadioButton {
+    color: #2c3e50;
+    padding: 3px;
+    font-size: 35px;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QRadioButton::indicator:unchecked {
+    border: 1px solid #bdc3c7;
+    border-radius: 8px;
+    background-color: white;
+}
+
+QRadioButton::indicator:checked {
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    background-color: #3498db;
+}
+
+QCheckBox {
+    color: #2c3e50;
+    padding: 3px;
+    font-size: 35px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+}
+
+QCheckBox::indicator:unchecked {
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    background-color: white;
+}
+
+QCheckBox::indicator:checked {
+    border: 1px solid #3498db;
+    border-radius: 4px;
+    background-color: #3498db;
+}
+
+/* ===== КОМБОБОКСЫ ===== */
+QComboBox {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: white;
+    min-width: 6em;
+    font-size: 35px;
+}
+
+QComboBox:focus {
+    border-color: #3498db;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 24px;
+}
+
+QComboBox::down-arrow {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #2c3e50;
+    width: 0px;
+    height: 0px;
+}
+
+QComboBox QAbstractItemView {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    background-color: white;
+    font-size: 20px;
+}
+
+QComboBox QAbstractItemView::item:selected {
+    background-color: #3498db;
+    color: white;
+}
+
+/* ===== СПИНБОКСЫ ===== */
+QSpinBox {
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    padding: 8px;
+    background-color: white;
+    font-size: 35px;
+}
+
+QSpinBox:focus {
+    border-color: #3498db;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: none;
+    background-color: #ecf0f1;
+    width: 24px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+    background-color: #bdc3c7;
+}
+
+/* ===== СЛАЙДЕРЫ ===== */
+QSlider::groove:horizontal {
+    border: 1px solid #bdc3c7;
+    height: 10px;
+    background: #ecf0f1;
+    border-radius: 2px;
+}
+
+QSlider::handle:horizontal {
+    background: #3498db;
+    border: 1px solid #2980b9;
+    width: 20px;
+    margin: -6px 0;
+    border-radius: 8px;
+}
+
+QSlider::handle:horizontal:hover {
+    background: #2980b9;
+}
+
+/* ===== КАСТОМНЫЕ СВОЙСТВА ДЛЯ QPROGRESSINDICATOR ===== */
+QProgressIndicator {
+    color: #3498db;
+    background-color: transparent;
+}
+
+/* ===== УПРАВЛЕНИЕ ПРОБЕЛАМИ ===== */
+QWidget[objectName="answers_layout"] > * {
+    margin: 5px;
+}
+
+QToolBar > * {
+    margin: 3px;
+}
+
+/* Стили для изображений в практических заданиях */
+#imageCaption {
+    font-size: 16px;
+    color: #2c3e50;
+    margin-top: 12px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 3px;
+}
+
+/* Стили для полноэкранного просмотра */
+FullscreenImageViewer {
+    background-color: black;
+}
+
+FullscreenImageViewer QScrollArea {
+    background-color: black;
+    border: none;
+}
+
+FullscreenImageViewer QLabel {
+    background-color: black;
+}
+
+/* ===== ДОПОЛНИТЕЛЬНЫЕ СТИЛИ ДЛЯ УЛУЧШЕННОЙ ЧИТАЕМОСТИ ===== */
+QLabel {
+    font-size: 35px;
+}
+
+QPushButton {
+    font-size: 35px;
+}
+
+/* ===== ТАБЛИЦА СТАТИСТИКИ В ФИНАЛЬНЫХ РЕЗУЛЬТАТАХ ===== */
+/* Основная таблица статистики */
+QTableWidget[objectName="stats_table"] {
+    font-size: 22px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background-color: white;
+    gridline-color: #dee2e6;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+QTableWidget[objectName="stats_table"]::item {
+    padding: 20px 15px;
+    font-size: 35px;
+    min-height: 50px;
+    border: 1px solid #dee2e6;
+    text-align: center;
+    min-width: 400px;
+    max-width: 400px;
+}
+
+/* Автоматическое перенос текста в ячейках */
+QTableWidget[objectName="stats_table"]::item {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* ФИКСИРОВАННЫЕ ШИРИНЫ СТОЛБЦОВ ДЛЯ РОВНОЙ ТАБЛИЦЫ */
+QHeaderView[objectName="stats_header"]::section:first {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+QHeaderView[objectName="stats_header"]::section:nth-child(2) {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+QHeaderView[objectName="stats_header"]::section:nth-child(3) {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+QHeaderView[objectName="stats_header"]::section:nth-child(4) {
+    min-width: 500px;
+    max-width: 500px;
+}
+
+/* Заголовки таблицы статистики */
+QHeaderView[objectName="stats_header"] {
+    font-size: 22px;
+    min-height: 70px;
+}
+
+QHeaderView[objectName="stats_header"]::section {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 20px 15px;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #2980b9;
+    text-align: center;
+}
+
+/* Одинаковая ширина ячеек в строках */
+QTableWidget[objectName="stats_table"] {
+    min-width: 1400px;
+    max-width: 1400px;
+}
+
+/* Выравнивание текста в ячейках для конкретных столбцов */
+QTableWidget[objectName="stats_table"]::item:first {
+    text-align: left;
+    padding-left: 20px;
+}
+
+QTableWidget[objectName="stats_table"]::item:nth-child(2),
+QTableWidget[objectName="stats_table"]::item:nth-child(3),
+QTableWidget[objectName="stats_table"]::item:nth-child(4) {
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Цветовые стили для процентных значений */
+QTableWidget[objectName="stats_table"]::item[data-percentage="high"] {
+    color: #28a745;
+    font-weight: bold;
+}
+
+QTableWidget[objectName="stats_table"]::item[data-percentage="medium"] {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+QTableWidget[objectName="stats_table"]::item[data-percentage="low"] {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Альтернативные строки */
+QTableWidget[objectName="stats_table"]::item:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+QTableWidget[objectName="stats_table"]::item:nth-child(odd) {
+    background-color: white;
+}
+
+/* Эффект при наведении */
+QTableWidget[objectName="stats_table"]::item:hover {
+    background-color: #e8f4fd;
+}
+
+/* Увеличенные границы для лучшей читаемости */
+QTableWidget[objectName="stats_table"] {
+    border-width: 2px;
+}
+
+/* Увеличенные отступы вокруг всей таблицы */
+QWidget[objectName="stats_widget"] > QVBoxLayout {
+    margin: 25px;
+    spacing: 20px;
+}
+
+/* Контейнер для заголовка статистики */
+QLabel[objectName="statsTitle"] {
+    font-size: 26px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #3498db;
+}
+
+/* Стили для числовых значений в таблице */
+QTableWidget[objectName="stats_table"]::item[text*="%"] {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ===== СТИЛИ ДЛЯ ПРОТОКОЛА (ФОРМЫ) ===== */
+/* Заголовки полей в форме */
+QLabel[objectName="fieldLabel"] {
+    font-size: 35px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 15px;
+    margin-bottom: 8px;
+    padding: 5px;
+}
+
+/* Заголовок формы */
+QLabel[objectName="formTitle"] {
+    font-size: 30px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+/* Подписи подполей */
+QLabel[objectName^="subfield"] {
+    font-size: 35px;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+/* Контейнер формы */
+QWidget[objectName="form_container"] {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Скролл-область формы */
+QScrollArea[objectName="form_scroll"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* ===== ВЕРХНИЕ ВКЛАДКИ В ПРАКТИЧЕСКИХ ЗАДАНИЯХ ===== */
+/* Основной контейнер вкладок */
+QTabWidget[objectName="tab_widget"] {
+    font-size: 35px;
+}
+
+/* Панель вкладок */
+QTabBar {
+    font-size: 35px;
+    min-height: 60px;
+    spacing: 10px;
+}
+
+/* Отдельные вкладки */
+QTabBar::tab {
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px 30px;
+    min-width: 180px;
+    min-height: 50px;
+    margin: 5px 3px;
+    border: 2px solid #ddd;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+QTabBar::tab:selected {
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    border-color: #2980b9;
+    border-bottom-color: #3498db;
+}
+
+/* Для очень длинных названий вкладок */
+QTabBar::tab:first {
+    min-width: 200px;
+}
+
+QTabBar::tab:last {
+    min-width: 200px;
+}
+
+/* Содержимое вкладок */
+QTabWidget::pane {
+    border: 3px solid #3498db;
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    background-color: white;
+    padding: 15px;
+    top: -3px;
+}
+
+/* ===== ТАБЛИЦА РЕЗУЛЬТАТОВ В ПРАКТИЧЕСКИХ ЗАДАНИЯХ ===== */
+/* Основная таблица результатов */
+QTableWidget[objectName="results_table"] {
+    font-size: 30px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    background-color: white;
+}
+
+QTableWidget[objectName="results_table"]::item {
+    padding: 20px 15px;
+    font-size: 30px;
+    min-height: 60px;
+    border: 1px solid #ecf0f1;
+}
+
+/* Автоматическое перенос текста в ячейках */
+QTableWidget[objectName="results_table"]::item {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+/* Увеличение ширины столбцов */
+QHeaderView[objectName="results_header"]::section:first {
+    min-width: 250px;
+}
+
+QHeaderView[objectName="results_header"]::section:nth-child(2) {
+    min-width: 200px;
+}
+
+QHeaderView[objectName="results_header"]::section:nth-child(3) {
+    min-width: 300px;
+}
+
+QTableWidget[objectName="results_table"]::item:hover {
+    background-color: #e8f4fd;
+}
+
+/* Заголовки таблицы результатов */
+QHeaderView[objectName="results_header"] {
+    font-size: 22px;
+    min-height: 70px;
+}
+
+QHeaderView[objectName="results_header"]::section {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 25px 15px;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #2980b9;
+    text-align: center;
+}
+
+/* Вертикальное выравнивание текста в ячейках */
+QTableWidget[objectName="results_table"]::item {
+    text-align: left;
+    vertical-align: middle;
+}
+
+/* Увеличение ширины всей таблицы */
+QTableWidget[objectName="results_table"] {
+    min-width: 800px;
+    max-width: 1200px;
+}
+
+/* Цветовые стили для таблицы результатов */
+QTableWidget::item[correct="true"] {
+    background-color: #d4edda;
+    color: #155724;
+    border-left: 4px solid #28a745;
+}
+
+QTableWidget::item[incorrect="true"] {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 4px solid #dc3545;
+}
+
+/* Иконки в ячейках таблицы */
+QTableWidget::item::icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+}
+
+/* Финальный результат */
+QLabel[objectName="final_result_label"] {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 2px solid #dee2e6;
+    line-height: 1.6;
+}
+
+/* ===== ЭЛЕМЕНТЫ ПРАКТИЧЕСКИХ ЗАДАНИЙ ===== */
+/* Текстовые поля в практических заданиях */
+QTextEdit[objectName="theory_content"],
+QTextEdit[objectName="table_content"] {
+    font-size: 50px;
+    line-height: 1.6;
+    padding: 15px;
+    border: 1px solid #bdc3c7;
+    border-radius: 5px;
+    background-color: white;
+}
+
+/* Кнопки в практических заданиях */
+QPushButton[objectName="prev_btn"],
+QPushButton[objectName="next_btn"],
+QPushButton[objectName="check_btn"] {
+    font-size: 30px;
+    padding: 12px 25px;
+    min-height: 40px;
+}
+
+/* Навигация по изображениям */
+QLabel[objectName="image_counter"] {
+    font-size: 18px;
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* ===== ОБЩИЕ УЛУЧШЕНИЯ ===== */
+/* Все метки */
+QLabel {
+    font-size: 20px;
+}
+
+/* Все кнопки */
+QPushButton {
+    font-size: 18px;
+}
+
+/* Все комбобоксы */
+QComboBox {
+    font-size: 18px;
+    min-height: 40px;
+}
+
+/* Все текстовые поля */
+QLineEdit, QTextEdit {
+    font-size: 18px;
+    min-height: 40px;
+}
+
+/* Улучшенные отступы */
+QWidget[objectName="form_layout"] > * {
+    margin: 10px;
+    spacing: 15px;
+}
+
+/* Подсказки в таблицах */
+QTableWidget::item[data-hint] {
+    font-size: 16px;
+}
+
+/* Адаптивные размеры для различных элементов */
+@media screen and (max-width: 1024px) {
+    QLabel {
+        font-size: 18px;
+    }
+    
+    QPushButton {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+    
+    QTableWidget::item {
+        font-size: 18px;
+        padding: 12px;
+    }
+    
+    QTabBar::tab {
+        font-size: 18px;
+        padding: 15px 20px;
+        min-width: 150px;
+    }
+    
+    QHeaderView[objectName="stats_header"]::section {
+        min-width: 200px;
+        font-size: 18px;
+    }
+}
+
+/* Для очень больших экранов */
+@media screen and (min-width: 1920px) {
+    QLabel {
+        font-size: 22px;
+    }
+    
+    QPushButton {
+        font-size: 22px;
+        padding: 15px 30px;
+    }
+    
+    QTableWidget::item {
+        font-size: 22px;
+        padding: 25px;
+        min-height: 60px;
+    }
+    
+    QTabBar::tab {
+        font-size: 24px;
+        padding: 25px 35px;
+        min-width: 220px;
+        min-height: 60px;
+    }
+    
+    QHeaderView[objectName="stats_header"]::section {
+        min-width: 280px;
+        font-size: 24px;
+        padding: 25px 20px;
+    }
+}
+
+/* Специальные стили для длинного текста в таблицах */
+QTableWidget[objectName="results_table"]::item[text*="Значение"] {
+    font-weight: bold;
+}
+
+QTableWidget[objectName="results_table"]::item[text*="✓"] {
+    font-size: 24px;
+}
+
+QTableWidget[objectName="results_table"]::item[text*="✗"] {
+    font-size: 24px;
+}
+
+/* Увеличенные отступы вокруг таблицы */
+QWidget[objectName="results_tab"] > QVBoxLayout {
+    margin: 20px;
+    spacing: 20px;
+}
+
+/* Увеличенный скроллбар для таблицы */
+QScrollArea[contains="QTableWidget"] QScrollBar:vertical {
+    width: 25px;
+}
+
+QScrollArea[contains="QTableWidget"] QScrollBar:horizontal {
+    height: 25px;
+}
+
+QLabel#detailedStatsTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #34db4dff;
+}
+
+/* Основная таблица */
+QTableWidget#detailedStatsTable {
+    font-size: 18px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    background-color: white;
+    gridline-color: #dee2e6;
+    alternate-background-color: #f8f9fa;
+    selection-background-color: #e8f4fd;
+}
+
+/* Ячейки */
+QTableWidget#detailedStatsTable::item {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+
+/* Цвета процентов */
+QTableWidget#detailedStatsTable::item[data-percentage="high"] {
+    color: #28a745;
+    font-weight: bold;
+}
+
+QTableWidget#detailedStatsTable::item[data-percentage="medium"] {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+QTableWidget#detailedStatsTable::item[data-percentage="low"] {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Заголовки таблицы */
+QHeaderView#detailedStatsHeader {
+    font-size: 18px;
+    min-height: 40px;
+}
+
+QHeaderView#detailedStatsHeader::section {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 8px;
+    background-color: #3498db;
+    color: white;
+    border: 1px solid #2980b9;
+}
+
+/* Фиксированные ширины колонок */
+QHeaderView#detailedStatsHeader::section:nth-of-type(1) {
+    min-width: 300px;
+    max-width: 300px;
+}
+
+QHeaderView#detailedStatsHeader::section:nth-of-type(2),
+QHeaderView#detailedStatsHeader::section:nth-of-type(3) {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+QHeaderView#detailedStatsHeader::section:nth-of-type(4) {
+    min-width: 240px;
+    max-width: 240px;
+}
