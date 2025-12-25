@@ -1,0 +1,4 @@
+EconomyCar
+7|Lada|Granta|2021|А123БВ777|45000|0|0|4|Standard|300|80|1|0|0|1|0|0|0|0|1
+EconomyCar
+8|Renault|Logan|2020|В456ГД777|52000|0|0|4|Standard|300|85|1|0|0|1|0|0|0|0|0

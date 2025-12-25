@@ -1,0 +1,4 @@
+BusinessCar
+3|Mercedes-Benz|E-Class|2022|С789ЕЖ777|15000|0|2|4|Premium|350|250|0|0|0|0|0|0|1|1|0
+BusinessCar
+9|BMW|760|2020|3472BB7|10000|1|2|4|Standard|300|1000|1|1|1|1|1|1|1|1|1

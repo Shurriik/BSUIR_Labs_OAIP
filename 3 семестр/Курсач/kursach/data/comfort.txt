@@ -1,0 +1,6 @@
+ComfortCar
+1|Peugeot|508|2020|5923XX7|148000|1|1|4|Standard|300|100|1|0|0|1|1|0|0|0|0
+ComfortCar
+2|Toyota|Camry|2021|М789НП777|35000|0|1|4|Premium|350|120|1|1|0|1|1|0|0|1|0
+ComfortCar
+5|Volkswagen|Passat|2019|К321ЛМ777|67000|0|1|4|Standard|300|110|1|1|0|1|1|0|0|0|1
