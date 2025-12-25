@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CommissionMember">
+    <Position X="1" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>QAAAAEABAQAAUAIABAAgAIIGAhAQAAAAAACAEQUICAA=</HashCode>
+      <FileName>Commission_member.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Human">
+    <Position X="3" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IIIAAAAAIABAQAQAAAAEAYAEAAgQAAAAAAIgGEQACCA=</HashCode>
+      <FileName>Human.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeacherCommissionMember">
+    <Position X="2.5" Y="14" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAQADAAEASAIAEAAAQAAQABAQgEAAACAA=</HashCode>
+      <FileName>Teacher_commission_member.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UniversityTeacher">
+    <Position X="4.5" Y="7.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>ACACIAIABAACQQAAAAAAKIImACAyACAAAIAAEAAACCA=</HashCode>
+      <FileName>University_teacher.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
