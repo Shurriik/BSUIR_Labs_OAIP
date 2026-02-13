@@ -1,0 +1,31 @@
+|OCHY
+P1 <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+y2 => inst6.IN0
+y2 => inst13.IN1
+y2 => inst4.IN0
+y2 => inst4.IN1
+x2 => inst2.IN0
+x2 => inst2.IN1
+x2 => inst7.IN1
+x2 => inst9.IN0
+x2 => inst17.IN1
+x2 => inst18.IN1
+x2 => inst20.IN0
+x2 => inst25.IN4
+y1 => inst3.IN0
+y1 => inst3.IN1
+y1 => inst.IN0
+y1 => inst8.IN0
+h => inst13.IN3
+h => inst5.IN0
+h => inst5.IN1
+h => inst20.IN2
+h => inst25.IN2
+x1 => inst1.IN0
+x1 => inst1.IN1
+x1 => inst13.IN0
+x1 => inst18.IN0
+P3 <= inst16.DB_MAX_OUTPUT_PORT_TYPE
+P4 <= inst22.DB_MAX_OUTPUT_PORT_TYPE
+
+
